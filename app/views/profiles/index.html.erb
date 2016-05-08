@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<%= form_tag(results_path, method: "get") do %>
+<%= text_field_tag :query, params[:query] %>
+<%= submit_tag "Search", name: nil %>
+<% end %>
+<h1>Listing Profiles</h1>
+
+<%= netzke :profiles %>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>
